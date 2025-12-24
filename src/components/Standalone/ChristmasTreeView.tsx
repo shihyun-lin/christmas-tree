@@ -164,7 +164,7 @@ const ChristmasTreeStandalone: React.FC = () => {
                 textShadow: '0 0 5px rgba(212, 175, 55, 0.3)'
             }}>By svjjsjrjs</div>
 
-            <audio ref={bgmRef} src="/bgm.mp3" loop autoPlay />
+            <audio ref={bgmRef} src="bgm.mp3" loop autoPlay />
 
             {/* Webcam for CV */}
             <div id="webcam-container">

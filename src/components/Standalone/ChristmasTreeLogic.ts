@@ -282,7 +282,7 @@ export class ChristmasTreeLogic {
         const loadPromises = orderedPhotos.map(filename => {
             return new Promise<THREE.Texture | null>((resolve) => {
                 loader.load(
-                    `/photos/${filename}`,
+                    `photos/${filename}`,
                     (texture) => {
                         texture.colorSpace = THREE.SRGBColorSpace;
                         resolve(texture);
