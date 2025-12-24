@@ -1,0 +1,156 @@
+/* Clean reset for the component */
+#scene-canvas {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+}
+
+/* Loader */
+#loader {
+    position: fixed;
+    inset: 0;
+    z-index: 500;
+    background: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s ease;
+}
+
+#loader.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loader-spinner {
+    width: 40px;
+    height: 40px;
+    border: 2px solid transparent;
+    border-top: 1px solid #d4af37;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader-text {
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+/* Title */
+#title {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 30;
+    font-family: 'Great Vibes', 'Cinzel', cursive, serif;
+    font-size: 72px;
+    font-weight: 400;
+    background: linear-gradient(90deg,
+            #d4af37 0%,
+            #fff8e7 25%,
+            #ffd700 50%,
+            #fff8e7 75%,
+            #d4af37 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s linear infinite;
+    text-shadow: 0 0 30px rgba(212, 175, 55, 0.6),
+        0 0 60px rgba(212, 175, 55, 0.3);
+    transition: opacity 0.5s ease;
+    margin: 0;
+    letter-spacing: 3px;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% center;
+    }
+
+    100% {
+        background-position: -200% center;
+    }
+}
+
+.ui-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Upload Control */
+.upload-wrapper {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 30;
+    text-align: center;
+    transition: opacity 0.5s ease;
+}
+
+.upload-btn {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid #d4af37;
+    color: #d4af37;
+    padding: 12px 24px;
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    pointer-events: auto;
+}
+
+.upload-btn:hover {
+    background: rgba(212, 175, 55, 0.2);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+.upload-hint {
+    margin-top: 8px;
+    color: #fceea7;
+    font-size: 12px;
+    opacity: 0.7;
+    font-family: 'Times New Roman', serif;
+}
+
+/* Webcam Container */
+#webcam-container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+#webcam {
+    width: 160px;
+    height: 120px;
+    transform: scaleX(-1);
+}
+
+#canvas {
+    width: 160px;
+    height: 120px;
+    transform: scaleX(-1);
+}

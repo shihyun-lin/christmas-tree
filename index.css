@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 科技感动画 */
+@keyframes scan-vertical {
+  0% {
+    top: -10%;
+  }
+
+  100% {
+    top: 110%;
+  }
+}
+
+@keyframes scan-horizontal {
+  0% {
+    left: -10%;
+  }
+
+  100% {
+    left: 110%;
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 0.6;
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes twinkle {
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+
+@layer utilities {
+  .animate-scan-vertical {
+    animation: scan-vertical 3s linear infinite;
+  }
+
+  .animate-scan-horizontal {
+    animation: scan-horizontal 4s linear infinite;
+  }
+
+  .animate-float {
+    animation: float linear infinite;
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 20s linear infinite;
+  }
+
+  .animate-snowfall {
+    animation: snowfall linear infinite;
+  }
+
+  .animate-twinkle {
+    animation: twinkle 2s ease-in-out infinite;
+  }
+
+  .bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
+  }
+}
+
+/* Loader Spinner Animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-spinner {
+  width: 40px;
+  height: 40px;
+  border: 2px solid transparent;
+  border-top: 1px solid #d4af37;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Glass-morphism utilities */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* UI Hidden State */
+.ui-hidden {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 0.5s ease;
+}
+
+/* Text Gradient Effect */
+.text-gradient-gold {
+  background: linear-gradient(to bottom, #ffffff, #d4af37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+body {
+  margin: 0;
+  background: #000;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+.cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+/* Custom scrollbar for webkit */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #059669;
+}

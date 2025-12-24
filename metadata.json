@@ -1,0 +1,7 @@
+{
+  "name": "Memory Vortex Tree",
+  "description": "A cinematic 3D interactive Christmas tree where memories spiral from chaos into form using React Three Fiber and AI gesture control.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
